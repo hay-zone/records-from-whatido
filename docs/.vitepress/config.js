@@ -1,5 +1,5 @@
 export default {
-  title: 'VitePress 项目',
+  title: '记录成长',
   description: '一个功能完善的 VitePress 文档站点',
   themeConfig: {
     nav: [
