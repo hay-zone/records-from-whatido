@@ -1,269 +1,96 @@
-export default {
-  title: '码间拾光',
-  description: '在代码与文字之间，拾取那些闪光的瞬间 - IT技术博客、诗词文章、人生感悟',
-  base: '/records-from-whatido/',
+import { defineConfig } from 'vitepress';
+import { getThemeConfig } from '@sugarat/theme/node';
+
+const blogTheme = getThemeConfig({
+  // 作者信息
+  author: '小刘',
+
+  // 博客配置
+  blog: {
+    // 首页标语
+    motto: '为学应尽毕生力，攀高贵在少年时',
+    // 首页头像
+    avatar: '/avatar.png',
+    // 背景图片（水彩画背景由 CSS 实现，这里可以留空或设置为透明）
+    // bgImage: '/records-from-whatido/bg-image.jpeg',
+    // 底部小标语
+    slogan: '生活的真谛不在繁华，而在于淡泊',
+    // 是否展示作者卡片
+    showAuthor: false,  // 关闭默认的作者卡片，使用自定义的
+    // 分页配置
+    paginationSize: 6,
+    // 文章封面图（启用文章封面）
+    cover: true
+  },
+
+  // 公告配置
+  popover: {
+    title: '💡 欢迎来到码间拾光',
+    body: [
+      { type: 'text', content: '👋 在代码与文字之间，拾取那些闪光的瞬间' },
+      { type: 'text', content: '📚 这里记录技术成长、文学摘录与人生感悟' },
+      { type: 'text', content: '💻 涵盖前端、后端、架构等技术分享' },
+      { type: 'text', content: '📝 收录诗词文章、好文好句' }
+    ],
+    duration: 0
+  },
+
+  // 推荐文章
+  recommend: {
+    showSelf: true,
+    nextText: '下一页',
+    style: 'sidebar'
+  },
+
+  // 热门文章配置
+  hotArticle: {
+    title: '🔥 精选文章',
+    nextText: '换一组',
+    pageSize: 5,
+    empty: '暂无精选文章'
+  },
+
+  // 搜索配置
+  search: 'pagefind',
+
+  // 文章默认作者
+  authorList: [
+    {
+      nickname: '小刘',
+      url: 'https://github.com/hayzone',
+      des: '在代码的世界里寻找诗意'
+    }
+  ]
+});
+
+export default defineConfig({
+  extends: blogTheme,
+  title: '小刘\'s Blog',
+  description: '为学应尽毕生力，攀高贵在少年时',
+  // base: '/records-from-whatido/', // Cloudflare Pages 使用根路径，注释掉
+  lastUpdated: true,
+
   head: [
     ['link', { rel: 'icon', href: 'data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💡</text></svg>' }],
     ['meta', { name: 'author', content: '小刘' }],
     ['meta', { property: 'og:author', content: '小刘' }]
   ],
+
   themeConfig: {
-    footer: {
-      message: '好好生活，慢慢相遇',
-      copyright: 'Copyright © 2026 年 1 月至今 小刘 (hayzone)'
-    },
     nav: [
-      {
-        text: '指南',
-        items: [
-          { text: '快速开始', link: '/guide/quick-start' },
-          { text: '基础教程', link: '/guide/basic-tutorial' },
-          { text: '进阶指南', link: '/guide/advanced-guide' }
-        ]
-      },
-      {
-        text: '组件',
-        items: [
-          { text: '按钮组件', link: '/components/button' },
-          { text: '表单组件', link: '/components/form' },
-          { text: '布局组件', link: '/components/layout' }
-        ]
-      },
-      {
-        text: 'API 参考',
-        items: [
-          { text: '核心 API', link: '/api/core-api' },
-          { text: '工具 API', link: '/api/utils-api' },
-          { text: '配置 API', link: '/api/config-api' }
-        ]
-      },
-      {
-        text: '示例',
-        items: [
-          { text: '基础示例', link: '/examples/basic' },
-          { text: '进阶示例', link: '/examples/advanced' },
-          { text: '最佳实践', link: '/examples/best-practices' }
-        ]
-      },
-      {
-        text: '关于',
-        items: [
-          { text: '项目介绍', link: '/about/introduction' },
-          { text: '团队成员', link: '/about/team' },
-          { text: '更新日志', link: '/about/changelog' }
-        ]
-      },
-      {
-        text: '面试',
-        items: [
-          { text: 'Vue', link: '/interview/vue/basics' },
-          { text: 'React', link: '/interview/react/basics' },
-          { text: 'Node.js', link: '/interview/nodejs/basics' },
-          { text: 'TypeScript', link: '/interview/typescript/basics' },
-          { text: 'JavaScript', link: '/interview/javascript/basics' },
-          { text: 'CSS', link: '/interview/css/layout' },
-          { text: '小程序', link: '/interview/miniprogram/basics' },
-          { text: 'AI', link: '/interview/ai/machine-learning' },
-          { text: '架构', link: '/interview/architecture/design-patterns' },
-          { text: '工具', link: '/interview/tools/git' },
-          { text: '优化', link: '/interview/optimization/web-performance' }
-        ]
-      },
-      {
-        text: '好文收集',
-        items: [
-          { text: '诗词', link: '/articles/poetry/jiangnan' },
-          { text: '短句', link: '/articles/quotes/' },
-          { text: '其他', link: '/articles/other/mountain' }
-        ]
-      }
+      { text: '力扣每日一题', link: '/category/leetcode' },
+      { text: 'Java', link: '/category/java' },
+      { text: 'SpringBoot', link: '/category/springboot' },
+      { text: 'SSM', link: '/category/ssm' },
+      { text: '笔记', link: '/category/notes' },
+      { text: 'MySQL', link: '/category/mysql' },
+      { text: 'JavaWeb', link: '/category/javaweb' },
+      { text: 'Linux', link: '/category/linux' },
+      { text: '生活随笔', link: '/category/life' }
     ],
-    sidebar: {
-      '/guide/': [
-        {
-          text: '指南',
-          items: [
-            { text: '快速开始', link: '/guide/quick-start' },
-            { text: '基础教程', link: '/guide/basic-tutorial' },
-            { text: '进阶指南', link: '/guide/advanced-guide' }
-          ]
-        }
-      ],
-      '/components/': [
-        {
-          text: '组件',
-          items: [
-            { text: '按钮组件', link: '/components/button' },
-            { text: '表单组件', link: '/components/form' },
-            { text: '布局组件', link: '/components/layout' }
-          ]
-        }
-      ],
-      '/api/': [
-        {
-          text: 'API 参考',
-          items: [
-            { text: '核心 API', link: '/api/core-api' },
-            { text: '工具 API', link: '/api/utils-api' },
-            { text: '配置 API', link: '/api/config-api' }
-          ]
-        }
-      ],
-      '/examples/': [
-        {
-          text: '示例',
-          items: [
-            { text: '基础示例', link: '/examples/basic' },
-            { text: '进阶示例', link: '/examples/advanced' },
-            { text: '最佳实践', link: '/examples/best-practices' }
-          ]
-        }
-      ],
-      '/about/': [
-        {
-          text: '关于',
-          items: [
-            { text: '项目介绍', link: '/about/introduction' },
-            { text: '团队成员', link: '/about/team' },
-            { text: '更新日志', link: '/about/changelog' }
-          ]
-        }
-      ],
-      '/interview/vue/': [
-        {
-          text: 'Vue 面试',
-          items: [
-            { text: 'Vue 基础', link: '/interview/vue/basics' },
-            { text: 'Composition API', link: '/interview/vue/composition-api' },
-            { text: '状态管理', link: '/interview/vue/state-management' }
-          ]
-        }
-      ],
-      '/interview/react/': [
-        {
-          text: 'React 面试',
-          items: [
-            { text: 'React 基础', link: '/interview/react/basics' },
-            { text: 'React Hooks', link: '/interview/react/hooks' },
-            { text: '性能优化', link: '/interview/react/performance' }
-          ]
-        }
-      ],
-      '/interview/nodejs/': [
-        {
-          text: 'Node.js 面试',
-          items: [
-            { text: 'Node.js 基础', link: '/interview/nodejs/basics' },
-            { text: '异步编程', link: '/interview/nodejs/async' },
-            { text: 'Express vs Koa', link: '/interview/nodejs/express-koa' }
-          ]
-        }
-      ],
-      '/interview/typescript/': [
-        {
-          text: 'TypeScript 面试',
-          items: [
-            { text: 'TypeScript 基础', link: '/interview/typescript/basics' },
-            { text: 'TypeScript 进阶', link: '/interview/typescript/advanced' },
-            { text: '最佳实践', link: '/interview/typescript/practices' }
-          ]
-        }
-      ],
-      '/interview/javascript/': [
-        {
-          text: 'JavaScript 面试',
-          items: [
-            { text: 'JavaScript 基础', link: '/interview/javascript/basics' },
-            { text: 'ES6+ 特性', link: '/interview/javascript/es6' },
-            { text: '异步编程', link: '/interview/javascript/async' }
-          ]
-        }
-      ],
-      '/interview/css/': [
-        {
-          text: 'CSS 面试',
-          items: [
-            { text: 'CSS 布局', link: '/interview/css/layout' },
-            { text: '移动端 1px 问题', link: '/interview/css/1px-problem' },
-            { text: 'Margin 塌陷问题', link: '/interview/css/margin-collapse' }
-          ]
-        }
-      ],
-      '/interview/miniprogram/': [
-        {
-          text: '小程序面试',
-          items: [
-            { text: '小程序基础', link: '/interview/miniprogram/basics' },
-            { text: '组件开发', link: '/interview/miniprogram/components' },
-            { text: 'API 使用', link: '/interview/miniprogram/api' }
-          ]
-        }
-      ],
-      '/interview/ai/': [
-        {
-          text: 'AI 面试',
-          items: [
-            { text: '机器学习基础', link: '/interview/ai/machine-learning' },
-            { text: '大语言模型', link: '/interview/ai/llm' },
-            { text: '计算机视觉', link: '/interview/ai/computer-vision' }
-          ]
-        }
-      ],
-      '/interview/architecture/': [
-        {
-          text: '架构面试',
-          items: [
-            { text: '设计模式', link: '/interview/architecture/design-patterns' },
-            { text: '微服务架构', link: '/interview/architecture/microservices' },
-            { text: '系统设计', link: '/interview/architecture/system-design' }
-          ]
-        }
-      ],
-      '/interview/tools/': [
-        {
-          text: '工具面试',
-          items: [
-            { text: 'Git 版本控制', link: '/interview/tools/git' },
-            { text: 'Webpack', link: '/interview/tools/webpack' },
-            { text: 'Vite', link: '/interview/tools/vite' }
-          ]
-        }
-      ],
-      '/interview/optimization/': [
-        {
-          text: '优化面试',
-          items: [
-            { text: 'Web 性能优化', link: '/interview/optimization/web-performance' },
-            { text: 'HTTP 缓存策略', link: '/interview/optimization/http-cache' }
-          ]
-        }
-      ],
-      '/articles/poetry/': [
-        {
-          text: '诗词',
-          items: [
-            { text: '我打江南走过', link: '/articles/poetry/jiangnan' },
-            { text: '醉里挑灯看剑', link: '/articles/poetry/pozhenzi' }
-          ]
-        }
-      ],
-      '/articles/quotes/': [
-        {
-          text: '短句',
-          items: [
-            { text: '暂无内容', link: '/articles/quotes/' }
-          ]
-        }
-      ],
-      '/articles/other/': [
-        {
-          text: '其他',
-          items: [
-            { text: '山的那边', link: '/articles/other/mountain' },
-            { text: '滴露的康乃馨', link: '/articles/other/carnation' }
-          ]
-        }
-      ]
-    }
+
+    socialLinks: [
+      { icon: 'github', link: 'https://github.com/hayzone' }
+    ]
   }
-}
+});

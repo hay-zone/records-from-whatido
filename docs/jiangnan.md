@@ -7,6 +7,7 @@ tags:
 categories:
   - 好文收集
 description: 郑愁予的经典诗作，描绘了江南水乡的等待与思念
+cover: https://images.unsplash.com/photo-1545558014-8692077e9b5c?w=800
 author: 郑愁予
 recommend: 4
 ---

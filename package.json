@@ -1,6 +1,7 @@
 {
   "name": "code-light-blog",
   "version": "1.0.0",
+  "type": "module",
   "description": "码间拾光 - 在代码与文字之间，拾取那些闪光的瞬间。记录 IT 技术、文学摘录与人生感悟的个人博客。",
   "main": "index.js",
   "scripts": {
@@ -8,10 +9,21 @@
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs"
   },
-  "keywords": ["blog", "vitepress", "技术博客", "诗词", "IT", "hayzone"],
+  "keywords": [
+    "blog",
+    "vitepress",
+    "技术博客",
+    "诗词",
+    "IT",
+    "hayzone"
+  ],
   "author": "hayzone <hayzone@example.com>",
   "license": "ISC",
   "devDependencies": {
+    "@element-plus/icons-vue": "^2.3.2",
+    "@sugarat/theme": "^0.5.14",
+    "element-plus": "^2.13.1",
+    "sass-embedded": "^1.97.2",
     "vitepress": "^1.6.4"
   }
 }

@@ -7,6 +7,7 @@ tags:
 categories:
   - 好文收集
 description: 一束康乃馨，一份父爱，朴素却最伟大
+cover: https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=800
 recommend: 5
 ---
 
