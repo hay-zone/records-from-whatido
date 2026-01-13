@@ -1,5 +1,5 @@
 export default {
-  title: '博客小刘',
+  title: '码间拾光',
   description: '一个功能完善的 VitePress 文档站点',
   themeConfig: {
     nav: [
