@@ -1,7 +1,6 @@
 export default {
   title: '记录成长',
   description: '一个功能完善的 VitePress 文档站点',
-  base: '/records-from-whatido/',
   themeConfig: {
     nav: [
       {

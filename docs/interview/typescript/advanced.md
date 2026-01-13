@@ -34,16 +34,16 @@ type Readonly<T> = {
 
 ## 3. 工具类型
 
-### Partial<T>
+### Partial&lt;T&gt;
 将所有属性变为可选。
 
-### Required<T>
+### Required&lt;T&gt;
 将所有属性变为必选。
 
-### Pick<T, K>
+### Pick&lt;T, K&gt;
 挑选指定属性。
 
-### Omit<T, K>
+### Omit&lt;T, K&gt;
 排除指定属性。
 
 ## 4. 装饰器
