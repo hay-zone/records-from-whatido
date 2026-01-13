@@ -2,34 +2,34 @@
 layout: home
 
 hero:
-  name: VitePress 项目
-  text: 现代化的文档站点
-  tagline: 快速、简洁、强大的静态站点生成器
+  name: 码间拾光
+  text: 
+  tagline: 拾取技术的智慧，捕捉文字的温度，记录人生的感悟
   actions:
     - theme: brand
-      text: 快速开始
-      link: /guide/quick-start
+      text: 技术文章
+      link: /interview/vue/basics
     - theme: alt
-      text: 查看示例
-      link: /examples/basic
+      text: 好文收集
+      link: /articles/poetry/jiangnan
 
 features:
-  - icon: 🚀
-    title: 极速开发
-    details: 基于 Vite 构建，提供闪电般的冷启动和热更新体验，让文档编写更加高效流畅。
-  - icon: 📝
-    title: Markdown 增强
-    details: 支持 Markdown 扩展语法，包括代码高亮、自定义容器、表格等丰富功能。
+  - icon: 💻
+    title: 技术沉淀
+    details: IT 软件开发技术总结，涵盖 Vue、React、Node.js、TypeScript 等前后端技术栈，从实战中提炼知识精华。
+  - icon: 📚
+    title: 文学摘录
+    details: 精选好文好句、诗词歌赋，在繁忙的代码世界里，为心灵留一片诗意的栖息地。
+  - icon: 💭
+    title: 人生感悟
+    details: 记录工作生活中的思考与领悟，在技术与人文之间寻找平衡，在代码与文字间寻找共鸣。
+  - icon: 🎯
+    title: 面试宝典
+    details: 系统化的面试题库，包含前端、后端、架构、优化等各个方向，为求职之路保驾护航。
+  - icon: 📖
+    title: 内容丰富
+    details: 从技术教程到诗词雅韵，从代码实践到人生哲思，多维度记录成长轨迹，构建完整知识体系。
   - icon: 🎨
-    title: 主题定制
-    details: 提供灵活的主题配置选项，轻松定制属于你的文档站点风格。
-  - icon: 🔧
-    title: 组件化
-    details: 在 Markdown 中直接使用 Vue 组件，实现更加复杂的交互功能。
-  - icon: 📦
-    title: 开箱即用
-    details: 内置搜索、导航、侧边栏等常用功能，无需额外配置即可快速上手。
-  - icon: ⚡
-    title: 性能优化
-    details: 自动代码分割、预加载优化，确保用户获得最佳的浏览体验。
+    title: 精心设计
+    details: 简洁优雅的阅读界面，支持深色模式切换，让每一次阅读都成为美好的体验。
 ---

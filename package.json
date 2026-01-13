@@ -1,15 +1,15 @@
 {
-  "name": "vitepress-project",
+  "name": "code-light-blog",
   "version": "1.0.0",
-  "description": "",
+  "description": "码间拾光 - 在代码与文字之间，拾取那些闪光的瞬间。记录 IT 技术、文学摘录与人生感悟的个人博客。",
   "main": "index.js",
   "scripts": {
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["blog", "vitepress", "技术博客", "诗词", "IT", "hayzone"],
+  "author": "hayzone <hayzone@example.com>",
   "license": "ISC",
   "devDependencies": {
     "vitepress": "^1.6.4"

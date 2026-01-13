@@ -1,7 +1,17 @@
 export default {
   title: '码间拾光',
-  description: '一个功能完善的 VitePress 文档站点',
+  description: '在代码与文字之间，拾取那些闪光的瞬间 - IT技术博客、诗词文章、人生感悟',
+  base: '/records-from-whatido/',
+  head: [
+    ['link', { rel: 'icon', href: 'data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💡</text></svg>' }],
+    ['meta', { name: 'author', content: '小刘' }],
+    ['meta', { property: 'og:author', content: '小刘' }]
+  ],
   themeConfig: {
+    footer: {
+      message: '好好生活，慢慢相遇',
+      copyright: 'Copyright © 2026 年 1 月至今 小刘 (hayzone)'
+    },
     nav: [
       {
         text: '指南',
