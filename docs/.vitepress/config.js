@@ -1,7 +1,7 @@
 export default {
   title: '码间拾光',
   description: '在代码与文字之间，拾取那些闪光的瞬间 - IT技术博客、诗词文章、人生感悟',
-  base: '/records-from-whatido/',
+  // base: '/records-from-whatido/', // Cloudflare Pages 使用根路径
   head: [
     ['link', { rel: 'icon', href: 'data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💡</text></svg>' }],
     ['meta', { name: 'author', content: '小刘' }],
